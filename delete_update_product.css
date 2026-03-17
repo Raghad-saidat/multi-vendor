@@ -1,0 +1,89 @@
+/* --- NOVA PIXEL INVENTORY MANAGEMENT CSS --- */
+
+/* Main Container for the table */
+.inventory-container {
+    background: #050E3C; /* Dark Navy */
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #002455; /* Deep Blue border */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow-x: auto; /* Adds scroll if screen is too small */
+}
+
+.nova-edit-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.nova-edit-table th {
+    text-align: left;
+    padding: 15px 10px;
+    color: #D3D3D3;
+    border-bottom: 2px solid #002455;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nova-edit-table td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Row Inputs (Styling the text boxes to look integrated) */
+.row-input {
+    background: #020617; /* Very Dark Background */
+    border: 1px solid #002455;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 6px;
+    width: 100%;
+    outline: none;
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+}
+
+/* Focus State - Glows Red when clicked */
+.row-input:focus {
+    border-color: #FF3838; 
+    background: #000000;
+    box-shadow: 0 0 5px rgba(255, 56, 56, 0.3);
+}
+
+/* The Delete Button (X) */
+.delete-btn {
+    background: none;
+    border: none;
+    color: #DC0000; /* Primary Red */
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.delete-btn:hover {
+    color: #FF3838;
+    transform: scale(1.15);
+}
+
+/* Save Button (Header) */
+.btn-save-nova {
+    background: #DC0000;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-save-nova:hover {
+    background: #FF3838;
+    box-shadow: 0 0 15px rgba(220, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Highlight Color for Title */
+.highlight {
+    color: #FF3838;
+}

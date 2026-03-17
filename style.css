@@ -1,0 +1,251 @@
+:root {
+    --deep-navy: #050E3C;
+    --navy-blue: #002455;
+    --dark-red: #DC0000;
+    --bright-red: #FF3838;
+    --light-gray: #f4f4f4;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--light-gray);
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--deep-navy);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.logo span {
+    color: var(--bright-red);
+}
+
+/* Search Bar */
+.search-container {
+    flex: 0.6;
+    margin: 0 20px;
+}
+
+.search-bar {
+    display: flex;
+    background: var(--white);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    padding: 10px 15px;
+    outline: none;
+}
+
+.camera-btn, .search-submit {
+    border: none;
+    background: var(--white);
+    padding: 0 15px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--navy-blue);
+    transition: 0.3s;
+}
+
+.search-submit {
+    background-color: var(--dark-red);
+    color: var(--white);
+}
+
+.camera-btn:hover {
+    color: var(--bright-red);
+}
+
+/* Nav Links & Icons */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-width: 150px; /* Keeps the navbar stable when icons appear/disappear */
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.3rem;
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: var(--bright-red);
+    font-size: 0.7rem;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-login {
+    font-size: 0.9rem !important;
+    border: 1px solid var(--white);
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+.btn-register {
+    font-size: 0.9rem !important;
+    background-color: var(--dark-red);
+    padding: 6px 15px;
+    border-radius: 4px;
+}
+
+/* Sections */
+section {
+    padding: 50px 5%;
+}
+
+.section-title {
+    color: var(--deep-navy);
+    margin-bottom: 30px;
+    border-left: 5px solid var(--dark-red);
+    padding-left: 15px;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(rgba(0, 36, 85, 0.8), rgba(5, 14, 60, 0.8)), url('https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 5%;
+}
+
+/* Categories */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.cat-card {
+    background: var(--white);
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.cat-card i {
+    font-size: 2.5rem;
+    color: var(--navy-blue);
+    margin-bottom: 15px;
+}
+
+.cat-card:hover {
+    background-color: var(--navy-blue);
+    color: white;
+}
+
+.cat-card:hover i {
+    color: var(--bright-red);
+}
+
+/* Stores */
+.store-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.store-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.store-img {
+    width: 80px;
+    height: 80px;
+    background: var(--light-gray);
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--navy-blue);
+}
+
+.rating {
+    color: #f1c40f;
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
+
+.view-store {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 20px;
+    background: var(--deep-navy);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.view-store:hover {
+    background: var(--dark-red);
+}
+.lang-switcher {
+    margin-right: 15px;
+}
+
+#lang-toggle {
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#lang-toggle:hover {
+    background: var(--white);
+    color: var(--deep-navy);
+}

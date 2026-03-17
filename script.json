@@ -1,0 +1,36 @@
+// فتح النافذة
+function openModal() {
+    document.getElementById('loginModal').style.display = 'block';
+}
+
+// إغلاق النافذة
+function closeModal() {
+    document.getElementById('loginModal').style.display = 'none';
+}
+
+// تحديث الدور
+function updateRole(role, btn) {
+    document.getElementById('selectedRole').value = role;
+    document.getElementById('btnRoleText').innerText = role.charAt(0).toUpperCase() + role.slice(1);
+    document.querySelectorAll('.role-tab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
+
+// التعامل مع الدخول
+function handleAuth(e) {
+    e.preventDefault();
+    const role = document.getElementById('selectedRole').value;
+    alert("Logging in as " + role);
+    // توجيه المستخدم بناءً على الدور
+    if(role === 'vendor') window.location.href = 'vendor-dashboard.html';
+    else if(role === 'admin') window.location.href = 'admin-dashboard.html';
+    else closeModal(); 
+}
+
+// إغلاق النافذة عند الضغط خارجها
+window.onclick = function(event) {
+    let modal = document.getElementById('loginModal');
+    if (event.target == modal) {
+        closeModal();
+    }
+}
