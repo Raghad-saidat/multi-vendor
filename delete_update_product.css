@@ -1,89 +1,153 @@
-/* --- NOVA PIXEL INVENTORY MANAGEMENT CSS --- */
-
-/* Main Container for the table */
-.inventory-container {
-    background: #050E3C; /* Dark Navy */
+/* --- إعدادات عامة للمحتوى --- */
+.dashboard-content {
     padding: 30px;
-    border-radius: 12px;
-    border: 1px solid #002455; /* Deep Blue border */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    overflow-x: auto; /* Adds scroll if screen is too small */
+    background-color: #f8f9fc;
+    min-height: 100vh;
 }
 
-.nova-edit-table {
+/* --- تصميم شبكة البطاقات (Grid) --- */
+.inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
+
+/* --- تصميم البطاقة --- */
+.inventory-card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden; /* عشان الصورة تلتزم بحواف البطاقة */
+    border: 1px solid #eef0f2;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.inventory-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+/* --- قسم الصورة وزر الحذف العائم --- */
+.card-img-container {
     width: 100%;
-    border-collapse: collapse;
+    height: 180px;
+    position: relative;
+    background: #f1f3f5;
 }
 
-.nova-edit-table th {
-    text-align: left;
-    padding: 15px 10px;
-    color: #D3D3D3;
-    border-bottom: 2px solid #002455;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.nova-edit-table td {
-    padding: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* Row Inputs (Styling the text boxes to look integrated) */
-.row-input {
-    background: #020617; /* Very Dark Background */
-    border: 1px solid #002455;
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 6px;
+.card-img-container img {
     width: 100%;
-    outline: none;
-    font-size: 0.9rem;
-    transition: 0.3s ease;
+    height: 100%;
+    object-fit: cover; /* لضمان عدم تمدد الصورة */
 }
 
-/* Focus State - Glows Red when clicked */
-.row-input:focus {
-    border-color: #FF3838; 
-    background: #000000;
-    box-shadow: 0 0 5px rgba(255, 56, 56, 0.3);
+.delete-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
-/* The Delete Button (X) */
 .delete-btn {
-    background: none;
+    background: white;
+    color: #DC0000; /* لون أحمر نوڤا */
     border: none;
-    color: #DC0000; /* Primary Red */
-    font-size: 1.6rem;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    transition: transform 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+    text-decoration: none;
 }
 
 .delete-btn:hover {
-    color: #FF3838;
-    transform: scale(1.15);
+    background: #DC0000;
+    color: white;
+    transform: scale(1.1);
 }
 
-/* Save Button (Header) */
+/* --- محتوى البطاقة (Inputs) --- */
+.card-content {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    margin: 0 0 15px 0;
+    font-size: 1.1rem;
+    color: #001a3d; /* كحلي نوڤا */
+    font-weight: 700;
+}
+
+.input-group {
+    margin-bottom: 12px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.7rem;
+    color: #888;
+    margin-bottom: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card-input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #333;
+    background: #fafafa;
+    transition: border 0.3s ease;
+}
+
+.card-input:focus {
+    border-color: #001a3d;
+    background: #fff;
+    outline: none;
+}
+
+/* --- السعر والكمية بجانب بعض --- */
+.row-flex {
+    display: flex;
+    gap: 10px;
+}
+
+.row-flex .input-group {
+    flex: 1;
+}
+
+/* --- زر حفظ التعديلات في الهيدر --- */
 .btn-save-nova {
     background: #DC0000;
     color: white;
     border: none;
     padding: 12px 25px;
-    border-radius: 6px;
+    border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(220, 0, 0, 0.2);
+    transition: background 0.3s;
 }
 
 .btn-save-nova:hover {
-    background: #FF3838;
-    box-shadow: 0 0 15px rgba(220, 0, 0, 0.4);
-    transform: translateY(-2px);
+    background: #b30000;
 }
 
-/* Highlight Color for Title */
-.highlight {
-    color: #FF3838;
+/* --- للهواتف --- */
+@media (max-width: 600px) {
+    .inventory-grid {
+        grid-template-columns: 1fr;
+    }
 }
