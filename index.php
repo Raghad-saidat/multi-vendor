@@ -30,11 +30,11 @@
 
             <div class="nav-links">
                 <div class="lang-switcher">
-    <button id="lang-toggle" onclick="toggleLanguage()">
-        <i class="fa-solid fa-earth-americas"></i> 
-        <span id="lang-text">EN</span>
-    </button>
-</div>
+                    <button id="lang-toggle" onclick="toggleLanguage()">
+                        <i class="fa-solid fa-earth-americas"></i> 
+                        <span id="lang-text">EN</span>
+                    </button>
+                </div>
                 <div class="auth-buttons">
                     <a href="login.php" class="btn-login">Login</a>
                     <a href="register.php" class="btn-register">Register</a>
@@ -52,60 +52,71 @@
         <section class="categories">
             <h2 class="section-title"><i class="fa-solid fa-grip"></i> Shop by Category</h2>
             <div class="category-grid">
-                <div class="cat-card">
+                
+                <a href="index_category.php?type=electronics" class="cat-card" style="text-decoration: none; color: inherit;">
                     <i class="fa-solid fa-laptop"></i>
                     <p>Electronics</p>
-                </div>
-                <div class="cat-card">
+                </a>
+                
+                <a href="index_category.php?type=fashion" class="cat-card" style="text-decoration: none; color: inherit;">
                     <i class="fa-solid fa-shirt"></i>
                     <p>Fashion</p>
-                </div>
-                <div class="cat-card">
+                </a>
+                
+                <a href="index_category.php?type=mobiles" class="cat-card" style="text-decoration: none; color: inherit;">
                     <i class="fa-solid fa-mobile-screen-button"></i>
                     <p>Mobiles</p>
-                </div>
-                <div class="cat-card">
+                </a>
+                
+                <a href="index_category.php?type=home" class="cat-card" style="text-decoration: none; color: inherit;">
                     <i class="fa-solid fa-couch"></i>
                     <p>Home</p>
-                </div>
-                <div class="cat-card">
+                </a>
+                
+                <a href="index_category.php?type=gaming" class="cat-card" style="text-decoration: none; color: inherit;">
                     <i class="fa-solid fa-gamepad"></i>
                     <p>Gaming</p>
-                </div>
-                <div class="cat-card">
+                </a>
+                
+                <a href="index_category.php?type=sports" class="cat-card" style="text-decoration: none; color: inherit;">
                     <i class="fa-solid fa-dumbbell"></i>
                     <p>Sports</p>
-                </div>
+                </a>
+                
             </div>
         </section>
 
         <section class="stores">
             <h2 class="section-title"><i class="fa-solid fa-award"></i> Best Seller Stores</h2>
             <div class="store-grid">
+                
                 <div class="store-card">
-                    <div class="store-img"><i class="fa-solid fa-store"></i></div>
+                    <div class="store-img"><i class="fa-solid fa-microchip"></i></div>
                     <h3>Tech Hub</h3>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i> 4.9 (2k+ Sales)
                     </div>
-                    <a href="#" class="view-store">Visit Store</a>
+                    <a href="store.php?name=Tech Hub&desc=Your gateway to premium electronics&rate=4.9" class="view-store">Visit Store</a>
                 </div>
+                
                 <div class="store-card">
-                    <div class="store-img"><i class="fa-solid fa-store"></i></div>
+                    <div class="store-img"><i class="fa-solid fa-shirt"></i></div>
                     <h3>Urban Style</h3>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i> 4.8 (1.5k+ Sales)
                     </div>
-                    <a href="#" class="view-store">Visit Store</a>
+                    <a href="store.php?name=Urban Style&desc=Modern fashion and trends&rate=4.8" class="view-store">Visit Store</a>
                 </div>
+
                 <div class="store-card">
-                    <div class="store-img"><i class="fa-solid fa-store"></i></div>
+                    <div class="store-img"><i class="fa-solid fa-couch"></i></div>
                     <h3>Home Bliss</h3>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i> 4.7 (900 Sales)
                     </div>
-                    <a href="#" class="view-store">Visit Store</a>
+                    <a href="store.php?name=Home Bliss&desc=Furniture and decor experts&rate=4.7" class="view-store">Visit Store</a>
                 </div>
+
             </div>
         </section>
     </main>
