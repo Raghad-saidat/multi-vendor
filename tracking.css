@@ -1,0 +1,154 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.orders-container {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.orders-header {
+    margin-bottom: 30px;
+}
+
+.orders-header h1 {
+    font-size: 1.8rem;
+    color: #001a3d;
+    margin: 0;
+}
+
+.orders-header p {
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Card Design */
+.order-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #edf0f2;
+}
+
+.order-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f2f4;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.order-id-group .label {
+    display: block;
+    font-size: 0.75rem;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.order-id-group .value {
+    font-weight: bold;
+    color: #001a3d;
+    font-size: 1.1rem;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.pending { background: #fff8e1; color: #b08900; }
+.delivered { background: #e8f5e9; color: #2e7d32; }
+
+/* Mid Section Grid */
+.order-mid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.info-item.full {
+    grid-column: span 2;
+    margin-top: 5px;
+}
+
+.info-item i {
+    color: #001a3d;
+    background: #f0f4f8;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.info-item label {
+    display: block;
+    font-size: 0.7rem;
+    color: #aaa;
+}
+
+.info-item span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Footer Buttons */
+.order-bottom {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.btn-details, .btn-track {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-details {
+    background: white;
+    border: 1px solid #ddd;
+    color: #555;
+}
+
+.btn-track {
+    background: #001a3d;
+    border: none;
+    color: white;
+}
+
+.btn-track:hover {
+    background: #dc0000;
+}
+
+.btn-track-disabled {
+    background: #eee;
+    color: #999;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: not-allowed;
+}
